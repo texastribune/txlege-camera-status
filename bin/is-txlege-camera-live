@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const { isStreamLive } = require('../');
+
+const [chamber, cameraId] = process.argv.slice(2);
+
+isStreamLive(chamber, cameraId).then((res) => {
+  console.log(res);
+}).catch((err) => console.error(err));
