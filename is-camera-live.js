@@ -35,6 +35,10 @@ function validateM3u8Feed (feedUrl) {
  * @return {Promise}
  */
 function isCameraLive (chamber, cameraId) {
+  if (!['house', 'senate'].includes(chamber)) {
+    throw new Error('`chamber` must be either "house" or "senate"');
+  }
+
   const streamUrl = `https://tlc${chamber}.granicus.com/player/GetStreams.php?camera_id=${cameraId}`;
   const cameraUrl = `https://tlc${chamber}.granicus.com/MediaPlayer.php?camera_id=${cameraId}`;
 
