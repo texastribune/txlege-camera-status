@@ -1,6 +1,6 @@
 {
   "name": "txlege-camera-status",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Checks the live status of a camera used by the Texas House and Senate.",
   "main": "index.js",
   "repository": "texastribune/txlege-camera-status",
